@@ -1,0 +1,88 @@
+/* Import Font Google -Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+section {
+  min-height: 420px;
+}
+h2 {
+  font-weight: bold;
+}
+/* Navbar */
+nav.navbar {
+  text-transform: uppercase;
+}
+.nav-link {
+  color: white !important;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.nav-link.active,
+.nav-link:hover {
+  background: #3700ff;
+  border-color: white;
+}
+
+/* About */
+.about table td i {
+  font-size: 30px;
+  color: #3700ff;
+}
+.pLeft,
+.pRight {
+  opacity: 0;
+  transform: translate(-60px, 0);
+  transform: rotate(-40deg);
+  transition: 0.5s;
+}
+.pRight {
+  transform: translate(60px 0);
+  transform: rotate(40deg);
+}
+.pLeft.pMuncul,
+.pRight.pMuncul {
+  opacity: 1;
+  transform: translate(0, 0);
+  transform: rotate(0);
+}
+
+/* Portfolio */
+.portfolio .card {
+  opacity: 0;
+  transform: translate(50px, 0);
+  transition: 0.5s;
+}
+.portfolio .card.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.portfolio .card .img-thumb {
+  overflow: hidden;
+}
+.portfolio .card .img-thumb img {
+  transition: 0.5s;
+}
+.portfolio .card:hover img {
+  transform: scale(1.2);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.4em !important;
+  }
+  .nav-link {
+    border: none;
+    line-height: 30px !important;
+  }
+  .nav-link.active,
+  .nav-link:hover {
+    border: none;
+    background: none;
+    color: #0059ff !important;
+  }
+}
